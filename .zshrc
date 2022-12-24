@@ -1,3 +1,6 @@
+# Aliases
+alias e='nvim'
+
 # Environment variables
 export GOPATH=~/go
 export GOBIN=~/go/bin
@@ -16,12 +19,6 @@ complete -o nospace -C /Users/avean/go/bin/vault vault
 if which hcloud > /dev/null; then
   complete -C $(which hcloud) hcloud
 fi
-
-# Aliases
-alias clean='docker stop $(docker ps -qa) ; docker rm $(docker ps -qa) ; docker volume prune -f ; docker network prune -f'
-alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
-alias gitc='f(){ git clone "https://github.com/hashicorp/$@";  unset -f f; }; f'
-alias e='nvim'
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
