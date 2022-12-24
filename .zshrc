@@ -7,6 +7,7 @@ fi
 
 # Aliases
 alias e='nvim'
+alias clone='f(){ git clone "https://github.com/$(basename "$PWD")/$@";  unset -f f; }; f'
 
 # Global environment variables
 export GOPATH=~/go
