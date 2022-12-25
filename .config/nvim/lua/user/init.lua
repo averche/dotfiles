@@ -26,7 +26,7 @@ local config = {
   },
 
   -- Set colorscheme to use
-  colorscheme = "default_theme",
+  colorscheme = "onedark",
 
   -- Add highlight groups in any theme
   highlights = {
@@ -42,7 +42,7 @@ local config = {
   options = {
     opt = {
       -- set to true or false etc.
-      relativenumber = true, -- sets vim.opt.relativenumber
+      relativenumber = false, -- sets vim.opt.relativenumber
       number = true, -- sets vim.opt.number
       spell = false, -- sets vim.opt.spell
       signcolumn = "auto", -- sets vim.opt.signcolumn to auto
@@ -144,9 +144,9 @@ local config = {
     formatting = {
       -- control auto formatting on save
       format_on_save = {
-        enabled = true, -- enable or disable format on save globally
+        enabled = false, -- enable or disable format on save globally
         allow_filetypes = { -- enable format on save for specified filetypes only
-          -- "go",
+          "go",
         },
         ignore_filetypes = { -- disable format on save for specified filetypes
           -- "python",
@@ -208,6 +208,17 @@ local config = {
       ["<leader>bt"] = { "<cmd>BufferLineSortByTabs<cr>", desc = "Sort by tabs" },
       -- quick save
       -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+
+      -- git signs
+      ["<leader>gg"] = { function() require("gitsigns").next_hunk() end, desc = "Next git hunk" },
+
+      -- smart-splits
+      ["<tab>"] = { function() require("smart-splits").move_cursor_right() end, desc = "Move to right split" },
+
+      -- telescope
+      ["<leader><space>"] = { function() require("telescope.builtin").find_files() end, desc = "Search files" },
+      ["<leader>fa"]      = { function() require("telescope.builtin").find_files { hidden = true, no_ignore = true } end, desc = "Search all files" },
+      ["<leader>r"]       = { function() vim.lsp.buf.rename() end, desc = "Rename current symbol" }
     },
     t = {
       -- setting a mapping to false will disable it
@@ -231,6 +242,7 @@ local config = {
       --     require("lsp_signature").setup()
       --   end,
       -- },
+      { 'navarasu/onedark.nvim' }, -- theme inspired by Atom
 
       -- We also support a key value style plugin definition similar to NvChad:
       -- ["ray-x/lsp_signature.nvim"] = {
