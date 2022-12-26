@@ -3,4 +3,4 @@
 
 # Except ...
 !.zshrc
-!.config/nvim/lua/user/init.lua
+!.config/nvim/init.lua
