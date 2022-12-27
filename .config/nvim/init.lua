@@ -154,10 +154,6 @@ vim.keymap.set('n', '_',  '<C-w>s') -- split window horizontally
 vim.keymap.set('n', '\\', '<C-w>=') -- make split windows equal width & height
 
 vim.keymap.set('n', '<tab>', '<C-w>w') -- move to the next window
-vim.keymap.set('n', '<C-h>', '<C-w>h') -- move left
-vim.keymap.set('n', '<C-j>', '<C-w>j') -- move down
-vim.keymap.set('n', '<C-k>', '<C-w>k') -- move up
-vim.keymap.set('n', '<C-l>', '<C-w>l') -- move right
 
 -- Remap for dealing with word wrap
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
