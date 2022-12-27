@@ -23,6 +23,9 @@ require('packer').startup(function(use)
 
       -- Additional lua configuration, makes nvim stuff amazing
       'folke/neodev.nvim',
+
+      -- Tmux & split window navigation
+      use("christoomey/vim-tmux-navigator")
     },
   }
 
