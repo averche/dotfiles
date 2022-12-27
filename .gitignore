@@ -5,3 +5,4 @@
 !.p10k.zsh
 !.zshrc
 !.config/nvim/init.lua
+!.tmux.conf
