@@ -54,9 +54,6 @@ require('packer').startup(function(use)
   use 'numToStr/Comment.nvim' -- "gc" to comment visual regions/lines
   use 'tpope/vim-sleuth' -- Detect tabstop and shiftwidth automatically
 
-  -- Tmux & split window navigation
-  use 'christoomey/vim-tmux-navigator'
-
   -- Fuzzy Finder (files, lsp, etc)
   use { 'nvim-telescope/telescope.nvim', branch = '0.1.x', requires = { 'nvim-lua/plenary.nvim' } }
 
@@ -148,12 +145,18 @@ vim.g.maplocalleader = ' '
 -- See `:help vim.keymap.set()`
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
--- Window management
-vim.keymap.set('n', '|',  '<C-w>v') -- split window vertically
-vim.keymap.set('n', '_',  '<C-w>s') -- split window horizontally
-vim.keymap.set('n', '\\', '<C-w>=') -- make split windows equal width & height
+-- Increment & decrement
+vim.keymap.set('n', '+', '<C-a>')
+vim.keymap.set('n', '-', '<C-x>')
 
-vim.keymap.set('n', '<tab>', '<C-w>w') -- move to the next window
+-- Window management
+vim.keymap.set('n',  '|',    '<C-w>v') -- split window vertically
+vim.keymap.set('n',  '_',    '<C-w>s') -- split window horizontally
+vim.keymap.set('n', '<Tab>', '<C-w>w') -- move to the next split panel
+
+-- Tab management
+vim.keymap.set('n', '<leader>t', ':tabnew<CR>')  -- open a new tab
+vim.keymap.set('n', '<S-Tab>',   ':tabnext<CR>') -- move to the next tab
 
 -- Remap for dealing with word wrap
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
@@ -451,7 +454,7 @@ cmp.setup {
   mapping = cmp.mapping.preset.insert {
     ['<C-d>'] = cmp.mapping.scroll_docs(-4),
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
-    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<C-Space>'] = cmp.mapping.complete({}),
     ['<CR>'] = cmp.mapping.confirm {
       behavior = cmp.ConfirmBehavior.Replace,
       select = true,
