@@ -145,10 +145,6 @@ vim.g.maplocalleader = ' '
 -- See `:help vim.keymap.set()`
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
--- Increment & decrement
-vim.keymap.set('n', '+', '<C-a>')
-vim.keymap.set('n', '-', '<C-x>')
-
 -- Window management
 vim.keymap.set('n',  '|',    '<C-w>v') -- split window vertically
 vim.keymap.set('n',  '_',    '<C-w>s') -- split window horizontally
