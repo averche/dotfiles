@@ -1,0 +1,9 @@
+#!/bin/sh
+
+tmux rename-window terminal
+tmux split-window -h -p 50
+
+tmux new-window -n code
+tmux split-window -v -p 15
+tmux split-window -h -p 50
+
