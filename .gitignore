@@ -2,7 +2,8 @@
 *
 
 # Except ...
-!.p10k.zsh
-!.zshrc
+!.bin/ide
 !.config/nvim/init.lua
+!.p10k.zsh
 !.tmux.conf
+!.zshrc
