@@ -1,9 +1,14 @@
 #!/bin/sh
 
+clear
+
+# Window 0: terminal
 tmux rename-window terminal
 tmux split-window -h -p 50
 
+# Window 1: code
 tmux new-window -n code
 tmux split-window -v -p 15
 tmux split-window -h -p 50
+tmux select-pane -U
 
