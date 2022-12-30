@@ -1,4 +1,4 @@
--- Based on https://github.com/nvim-lua/kickstart.nvim/tree/39a941c3851fbadf08731601b9958785e50bee73
+-- Based on https://github.com/nvim-lua/kickstart.nvim/tree/c4d7212de3d309a20435333f42a0473cee81e29a
 
 -- Install packer
 local install_path = vim.fn.stdpath 'data' .. '/site/pack/packer/start/packer.nvim'
@@ -89,7 +89,7 @@ end
 -- Automatically source and re-compile packer whenever you save this init.lua
 local packer_group = vim.api.nvim_create_augroup('Packer', { clear = true })
 vim.api.nvim_create_autocmd('BufWritePost', {
-  command = 'source <afile> | PackerCompile',
+  command = 'source <afile> | silent! LspStop | silent! LspStart | PackerCompile',
   group = packer_group,
   pattern = vim.fn.expand '$MYVIMRC',
 })
