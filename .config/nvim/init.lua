@@ -100,8 +100,9 @@ vim.api.nvim_create_autocmd('BufWritePost', {
 -- Set highlight on search
 vim.o.hlsearch = false
 
--- Make line numbers default
+-- Relative & absolute line numbers
 vim.wo.number = true
+vim.wo.relativenumber = true
 
 -- Enable mouse mode
 vim.o.mouse = 'a'
@@ -148,13 +149,19 @@ vim.g.maplocalleader = ' '
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
 -- Window management
-vim.keymap.set('n',  '|',    '<C-w>v') -- split window vertically
-vim.keymap.set('n',  '_',    '<C-w>s') -- split window horizontally
-vim.keymap.set('n', '<Tab>', '<C-w>w') -- move to the next split panel
+vim.keymap.set('n', '<C-\\>', '<C-w>v') -- split window vertically
+vim.keymap.set('n', '<C-_>',  '<C-w>s') -- split window horizontally
+vim.keymap.set('n', '<Tab>',  '<C-w>w') -- move to the next split panel
 
 -- Tab management
 vim.keymap.set('n', '<leader>t', ':tabnew<CR>')  -- open a new tab
 vim.keymap.set('n', '<S-Tab>',   ':tabnext<CR>') -- move to the next tab
+
+-- Center on search / page up / page down
+vim.keymap.set('n', '<C-d>', '<C-d>zz')
+vim.keymap.set('n', '<C-u>', '<C-u>zz')
+vim.keymap.set('n', 'n', 'nzzzv')
+vim.keymap.set('n', 'N', 'Nzzzv')
 
 -- Remap for dealing with word wrap
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
