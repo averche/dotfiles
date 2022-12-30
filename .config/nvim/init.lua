@@ -128,10 +128,10 @@ vim.cmd [[colorscheme onedark]]
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
 
- -- Highlight the current cursor line
+-- Highlight the current cursor line
 vim.o.cursorline = true
 
- -- Allow backspace on indent, end of line or insert mode start position
+-- Allow backspace on indent, end of line or insert mode start position
 vim.o.backspace = "indent,eol,start"
 
 -- Split windows to the right & below
@@ -150,12 +150,12 @@ vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
 -- Window management
 vim.keymap.set('n', '<C-\\>', '<C-w>v') -- split window vertically
-vim.keymap.set('n', '<C-_>',  '<C-w>s') -- split window horizontally
-vim.keymap.set('n', '<Tab>',  '<C-w>w') -- move to the next split panel
+vim.keymap.set('n', '<C-_>', '<C-w>s') -- split window horizontally
+vim.keymap.set('n', '<Tab>', '<C-w>w') -- move to the next split panel
 
 -- Tab management
-vim.keymap.set('n', '<leader>t', ':tabnew<CR>')  -- open a new tab
-vim.keymap.set('n', '<S-Tab>',   ':tabnext<CR>') -- move to the next tab
+vim.keymap.set('n', '<leader>t', ':tabnew<CR>') -- open a new tab
+vim.keymap.set('n', '<S-Tab>', ':tabnext<CR>') -- move to the next tab
 
 -- Center on search / page up / page down
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
@@ -223,29 +223,29 @@ require('gitsigns').setup {
       if vim.wo.diff then return ']c' end
       vim.schedule(function() gs.next_hunk() end)
       return '<Ignore>'
-    end, {expr=true})
+    end, { expr = true })
 
     map('n', '<leader>gh', function()
       if vim.wo.diff then return '[c' end
       vim.schedule(function() gs.prev_hunk() end)
       return '<Ignore>'
-    end, {expr=true})
+    end, { expr = true })
 
     -- Actions
-    map({'n', 'v'}, '<leader>gs', ':Gitsigns stage_hunk<CR>')
-    map({'n', 'v'}, '<leader>gr', ':Gitsigns reset_hunk<CR>')
+    map({ 'n', 'v' }, '<leader>gs', ':Gitsigns stage_hunk<CR>')
+    map({ 'n', 'v' }, '<leader>gr', ':Gitsigns reset_hunk<CR>')
     map('n', '<leader>gS', gs.stage_buffer)
     map('n', '<leader>gu', gs.undo_stage_hunk)
     map('n', '<leader>gR', gs.reset_buffer)
     map('n', '<leader>gp', gs.preview_hunk)
-    map('n', '<leader>gb', function() gs.blame_line{full=true} end)
+    map('n', '<leader>gb', function() gs.blame_line { full = true } end)
     map('n', '<leader>gb', gs.toggle_current_line_blame)
     map('n', '<leader>gd', gs.diffthis)
     map('n', '<leader>gD', function() gs.diffthis('~') end)
     map('n', '<leader>ge', gs.toggle_deleted)
 
     -- Text object
-    map({'o', 'x'}, 'ih', ':<C-U>Gitsigns select_hunk<CR>')
+    map({ 'o', 'x' }, 'ih', ':<C-U>Gitsigns select_hunk<CR>')
   end
 }
 
