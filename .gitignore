@@ -1,9 +1,0 @@
-# Ignore everything
-*
-
-# Except ...
-!.bin/ide
-!.config/nvim/init.lua
-!.p10k.zsh
-!.tmux.conf
-!.zshrc
