@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # Aliases
-alias e='nvim'
+alias e='nvim -O $*'
 alias clone='f(){ git clone "https://github.com/$(basename "$PWD")/$@";  unset -f f; }; f'
 alias push='git push --set-upstream origin $(git_current_branch)'
 
