@@ -1,3 +1,7 @@
 #!/bin/sh
 
-stow --target=~/ configurations/
+set -e
+
+cd "$(dirname "${BASH_SOURCE[0]}")"
+
+stow --target="$HOME" configurations/
