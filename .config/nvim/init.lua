@@ -128,6 +128,7 @@ vim.cmd [[colorscheme onedark]]
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
 
+
 -- Highlight the current cursor line
 vim.o.cursorline = true
 
@@ -148,10 +149,11 @@ vim.g.maplocalleader = ' '
 -- See `:help vim.keymap.set()`
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
--- Window management
-vim.keymap.set('n', '<C-\\>', '<C-w>v') -- split window vertically
-vim.keymap.set('n', '<C-_>', '<C-w>s') -- split window horizontally
+-- Window split management
 vim.keymap.set('n', '<Tab>', '<C-w>w') -- move to the next split panel
+
+vim.keymap.set('n', '<C-h>', ':vertical resize +1<CR>', { silent = true })
+vim.keymap.set('n', '<C-l>', ':vertical resize -1<CR>', { silent = true })
 
 -- Tab management
 vim.keymap.set('n', '<leader>t', ':tabnew<CR>') -- open a new tab
@@ -165,7 +167,9 @@ vim.keymap.set('n', 'N', 'Nzzzv')
 
 -- Scroll up & down without moving the cursor
 vim.keymap.set('n', '<C-j>', '<C-e>')
+vim.keymap.set('n', '<C-e>', '<Nop>', { silent = true })
 vim.keymap.set('n', '<C-k>', '<C-y>')
+vim.keymap.set('n', '<C-y>', '<Nop>', { silent = true })
 
 -- Remap for dealing with word wrap
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
