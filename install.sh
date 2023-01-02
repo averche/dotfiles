@@ -4,4 +4,4 @@ set -e
 
 cd "$(dirname "${BASH_SOURCE[0]}")"
 
-stow --target="$HOME" configurations/
+stow --target="$HOME" dev-environment/
