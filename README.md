@@ -15,3 +15,13 @@ the following components:
   - custom keybinds / configurations
 
 ![screenshot](assets/dev-environment.png)
+
+# Installation
+
+```shell-session
+./install.sh
+```
+
+This script uses [`stow`](https://www.gnu.org/software/stow/) to create
+symlinks to the corresponding files in the home directory.
+
