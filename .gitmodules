@@ -1,0 +1,7 @@
+[submodule "dev-environment/.tmux/plugins/tmux-sensible"]
+	path = dev-environment/.tmux/plugins/tmux-themepack
+	url = https://github.com/jimeh/tmux-themepack
+[submodule "dev-environment/.tmux/plugins/tpm"]
+	path = dev-environment/.tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
+
