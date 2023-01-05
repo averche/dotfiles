@@ -1,4 +1,4 @@
--- Based on https://github.com/nvim-lua/kickstart.nvim/tree/c4d7212de3d309a20435333f42a0473cee81e29a
+-- Based on https://github.com/nvim-lua/kickstart.nvim/tree/4916072854d01d0503821b7f3061daeb381f0441
 
 -- Install packer
 local install_path = vim.fn.stdpath 'data' .. '/site/pack/packer/start/packer.nvim'
@@ -166,10 +166,18 @@ vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
 
 -- Scroll up & down without moving the cursor
-vim.keymap.set('n', '<C-j>', '<C-e>')
-vim.keymap.set('n', '<C-e>', '<Nop>', { silent = true })
-vim.keymap.set('n', '<C-k>', '<C-y>')
-vim.keymap.set('n', '<C-y>', '<Nop>', { silent = true })
+vim.keymap.set({ 'n', 'v' }, '<C-j>', '<C-e>')
+vim.keymap.set({ 'n', 'v' }, '<C-e>', '<Nop>', { silent = true })
+
+vim.keymap.set({ 'n', 'v' }, '<C-k>', '<C-y>')
+vim.keymap.set({ 'n', 'v' }, '<C-y>', '<Nop>', { silent = true })
+
+-- Regular up/down movement with shift
+vim.keymap.set({ 'n', 'v' }, '<S-Up>', 'k')
+vim.keymap.set({ 'n', 'v' }, '<S-Down>', 'j')
+
+vim.keymap.set('i', '<S-Up>', '<Nop>', { silent = true })
+vim.keymap.set('i', '<S-Down>', '<Nop>', { silent = true })
 
 -- Remap for dealing with word wrap
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
@@ -293,7 +301,7 @@ vim.keymap.set('n', '<leader>fd', require('telescope.builtin').diagnostics, { de
 -- See `:help nvim-treesitter`
 require('nvim-treesitter.configs').setup {
   -- Add languages to be installed here that you want installed for treesitter
-  ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'typescript', 'help' },
+  ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'typescript', 'help', 'vim' },
 
   highlight = { enable = true },
   indent = { enable = true, disable = { 'python' } },
