@@ -100,9 +100,8 @@ vim.api.nvim_create_autocmd('BufWritePost', {
 -- Set highlight on search
 vim.o.hlsearch = true
 
--- Relative & absolute line numbers
+-- Absolute line numbers
 vim.wo.number = true
-vim.wo.relativenumber = true
 
 -- Enable mouse mode
 vim.o.mouse = 'a'
