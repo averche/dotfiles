@@ -417,9 +417,9 @@ end
 --  the `settings` field of the server config. You must look up that documentation yourself.
 local servers = {
   gopls = {},
+  rust_analyzer = {},
   -- clangd = {},
   -- pyright = {},
-  -- rust_analyzer = {},
   -- tsserver = {},
 
   sumneko_lua = {
