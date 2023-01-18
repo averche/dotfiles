@@ -62,7 +62,7 @@ window:
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background and no title bar buttons
-  #decorations: full
+  decorations: none
 
   # Background opacity
   #
@@ -758,7 +758,7 @@ draw_bold_text_with_bright_colors: true
 #
 # If the same trigger is assigned to multiple actions, all of them are executed
 # in the order they were defined in.
-#key_bindings:
+key_bindings:
   #- { key: Paste,                                       action: Paste          }
   #- { key: Copy,                                        action: Copy           }
   #- { key: L,         mods: Control,                    action: ClearLogNotice }
@@ -867,6 +867,7 @@ draw_bold_text_with_bright_colors: true
   #- { key: W,              mods: Command,                    action: Quit                  }
   #- { key: N,              mods: Command,                    action: SpawnNewInstance      }
   #- { key: F,              mods: Command|Control,            action: ToggleFullscreen      }
+  -  { key: M,              mods: Command,                    action: ToggleFullscreen      }
   #- { key: F,              mods: Command, mode: ~Search,     action: SearchForward         }
   #- { key: B,              mods: Command, mode: ~Search,     action: SearchBackward        }
 
