@@ -7,6 +7,7 @@ fi
 
 # Aliases
 alias e='nvim -O $*'
+alias branch='git branch --sort=-committerdate | fzf --header "Checkout Recent Branch" --preview "git diff {1} --color=always | delta" --pointer="" | xargs git checkout'
 alias clone='f(){ git clone --recurse-submodules "https://github.com/$(basename "$PWD")/$@";  unset -f f; }; f'
 alias push='git push --set-upstream origin $(git_current_branch)'
 
