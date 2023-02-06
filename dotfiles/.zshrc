@@ -6,9 +6,10 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # Aliases
-alias e='nvim -O $*'
 alias branch='git branch --sort=-committerdate | fzf --header "Checkout Recent Branch" --preview "git diff {1} --color=always | delta" --pointer="" | xargs git checkout'
+alias cat='bat'
 alias clone='f(){ git clone --recurse-submodules "https://github.com/$(basename "$PWD")/$@";  unset -f f; }; f'
+alias e='nvim -O $*'
 alias push='git push --set-upstream origin $(git_current_branch)'
 
 # Global environment variables
