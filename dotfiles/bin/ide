@@ -4,7 +4,7 @@
 tmux rename-window code
 tmux split-window -h -p 100
 tmux split-window -v -p 20
-tmux split-window -h -p 20
+tmux split-window -h -p 22
 tmux clock-mode
 
 # Window 1: terminal
