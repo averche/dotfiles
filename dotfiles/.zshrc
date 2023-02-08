@@ -10,7 +10,7 @@ alias branch='git branch --sort=-committerdate | fzf --header "Checkout Recent B
 alias cat='bat'
 alias clone='f(){ git clone --recurse-submodules "https://github.com/$(basename "$PWD")/$@";  unset -f f; }; f'
 alias e='nvim -O $*'
-alias p='fzf --preview "head -60 {}"'
+alias p='fzf --preview "bat --color=always --style=numbers --line-range=:60 {}"'
 alias push='git push --set-upstream origin $(git_current_branch)'
 
 # Global environment variables
