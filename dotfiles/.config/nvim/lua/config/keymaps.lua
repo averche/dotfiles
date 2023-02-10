@@ -5,11 +5,10 @@
 -- Window split management
 vim.keymap.set("n", "<Tab>", "<C-w>w") -- move to the next split panel
 
-vim.keymap.set("n", "<C-h>", ":vertical resize +1<CR>", { silent = true })
-vim.keymap.set("n", "<C-l>", ":vertical resize -1<CR>", { silent = true })
+vim.keymap.set("n", "<C-h>", "<cmd>vertical resize +1<CR>", { silent = true })
+vim.keymap.set("n", "<C-l>", "<cmd>vertical resize -1<CR>", { silent = true })
 
--- Tab management
-vim.keymap.set("n", "<S-Tab>", ":tabnext<CR>") -- move to the next tab
+vim.keymap.set("n", "<S-Tab>", "<cmd>tabnext<CR>") -- move to the next tab
 
 -- Scroll up & down without moving the cursor
 vim.keymap.set({ "n", "v" }, "<C-j>", "<C-e>")
