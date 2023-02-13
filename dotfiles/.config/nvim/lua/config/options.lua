@@ -3,3 +3,4 @@
 -- Add any additional options here
 
 vim.wo.relativenumber = true
+vim.opt.tabstop = 4
