@@ -19,6 +19,7 @@ md5sha1sum
 ncdu
 neovim
 prettier
+procs
 rename
 ripgrep
 sevenzip
