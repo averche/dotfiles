@@ -12,3 +12,5 @@ return {
     opts.section.header.val = vim.split(logo, "\n", { trimempty = true })
   end,
 }
+
+-- vim: ts=2 sts=2 sw=2 e
