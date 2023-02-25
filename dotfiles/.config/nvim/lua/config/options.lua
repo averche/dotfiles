@@ -4,6 +4,7 @@
 
 vim.wo.relativenumber = false
 vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 
 -- vim: ts=2 sts=2 sw=2 e
