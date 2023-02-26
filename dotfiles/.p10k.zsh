@@ -493,6 +493,11 @@
   typeset -g POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND=76
   typeset -g POWERLEVEL9K_VCS_MODIFIED_FOREGROUND=178
 
+  # Show '⇣' if local branch is behind remote.
+  typeset -g POWERLEVEL9K_VCS_INCOMING_CHANGES_ICON=':⇣'
+  # Show '⇡' if local branch is ahead of remote.
+  typeset -g POWERLEVEL9K_VCS_OUTGOING_CHANGES_ICON=':⇡'
+
   ##########################[ status: exit code of the last command ]###########################
   # Enable OK_PIPE, ERROR_PIPE and ERROR_SIGNAL status states to allow us to enable, disable and
   # style them independently from the regular OK and ERROR state.
