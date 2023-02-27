@@ -17,4 +17,4 @@ vim.keymap.set({ "n", "v" }, "<C-e>", "<Nop>", { silent = true })
 vim.keymap.set({ "n", "v" }, "<C-k>", "<C-y>")
 vim.keymap.set({ "n", "v" }, "<C-y>", "<Nop>", { silent = true })
 
--- vim: ts=2 sts=2 sw=2 e
+-- vim: ts=2 sts=2 sw=2 et
