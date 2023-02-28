@@ -17,4 +17,11 @@ vim.keymap.set({ "n", "v" }, "<C-e>", "<Nop>", { silent = true })
 vim.keymap.set({ "n", "v" }, "<C-k>", "<C-y>")
 vim.keymap.set({ "n", "v" }, "<C-y>", "<Nop>", { silent = true })
 
+-- Remap shift up/down to enter visual line mode & move up/down
+vim.keymap.set("n", "<S-Up>", "<S-v>k")
+vim.keymap.set("v", "<S-Up>", "k")
+
+vim.keymap.set("n", "<S-Down>", "<S-v>j")
+vim.keymap.set("v", "<S-Down>", "j")
+
 -- vim: ts=2 sts=2 sw=2 et
