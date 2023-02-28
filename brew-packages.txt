@@ -1,3 +1,4 @@
+7-zip
 awk
 bat
 curl
