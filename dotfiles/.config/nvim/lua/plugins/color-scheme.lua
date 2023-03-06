@@ -1,9 +1,14 @@
 return {
-  { "sainnhe/sonokai" },
+  {
+    "loctvl842/monokai-pro.nvim",
+    opts = {
+      filter = "octagon",
+    },
+  },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "sonokai",
+      colorscheme = "monokai-pro",
     },
   },
 }
