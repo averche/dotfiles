@@ -1,9 +1,9 @@
 return {
-  { "tanvirtin/monokai.nvim" },
+  { "cpea2506/one_monokai.nvim" },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "monokai",
+      colorscheme = "one_monokai",
     },
   },
 }
