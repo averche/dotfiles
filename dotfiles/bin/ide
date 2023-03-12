@@ -9,8 +9,6 @@ tmux clock-mode
 
 # Window 1: terminal
 tmux new-window -n terminal
-tmux split-window -h -p 50
-tmux select-pane -t0
 
 # Select correct pane & clean up
 tmux select-window -p
