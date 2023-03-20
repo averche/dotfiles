@@ -14,6 +14,7 @@ alias cat='bat'
 alias clone='f(){ git clone --recurse-submodules "https://github.com/$(basename "$PWD")/$@";  unset -f f; }; f'
 alias e='nvim -O $*'
 alias p='fzf --preview "bat --color=always --style=numbers --line-range=:60 {}"'
+alias prs='gh pr list --author="@me" --json=headRefName --jq ".[] | .headRefName" | fzf --pointer="" --preview="GH_FORCE_TTY=true gh pr view {1}" | cut -d" " -f2- | xargs git switch'
 alias push='git push --set-upstream origin $(git_current_branch)'
 
 # Global environment variables
