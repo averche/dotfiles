@@ -9,7 +9,7 @@ fi
 . /opt/homebrew/etc/profile.d/z.sh
 
 # Aliases
-alias branch='git branch --sort=-committerdate | fzf --header "Checkout Recent Branch" --preview "git diff {1} --color=always | delta" --pointer="" | xargs git checkout'
+alias branch='git branch --sort=-committerdate | fzf --preview "git diff {1} --color=always | delta" --pointer="" | xargs git switch'
 alias cat='bat'
 alias clone='f(){ git clone --recurse-submodules "https://github.com/$(basename "$PWD")/$@";  unset -f f; }; f'
 alias e='nvim -O $*'
