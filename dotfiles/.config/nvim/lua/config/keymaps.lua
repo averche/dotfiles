@@ -24,4 +24,8 @@ vim.keymap.set("v", "<S-Up>", "k")
 vim.keymap.set("n", "<S-Down>", "<S-v>j")
 vim.keymap.set("v", "<S-Down>", "j")
 
+-- Don't overwrite the paste buffer
+vim.keymap.set("x", "p", [["_dP]])
+vim.keymap.set("n", "x", [["_x]])
+
 -- vim: ts=2 sts=2 sw=2 et
