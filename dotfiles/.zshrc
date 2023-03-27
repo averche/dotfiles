@@ -15,7 +15,7 @@ alias clone='f(){ git clone --recurse-submodules "https://github.com/$(basename 
 alias e='nvim -O $*'
 alias p='fzf --preview "bat --color=always --style=numbers --line-range=:60 {}"'
 alias pr='gh pr view "$(git rev-parse --abbrev-ref HEAD)" --web'
-alias prs='gh pr list --author="@me" --json=headRefName --jq ".[] | .headRefName" | fzf --pointer="" --preview="GH_FORCE_TTY=true gh pr view {1}" | cut -d" " -f2- | xargs git switch'
+alias prs='gh pr list --author="@me" --json=number,headRefName,reviewDecision --jq ".[] | \"\(.number)\t\(.headRefName)\t\(.reviewDecision)\"" | column -t | fzf --pointer="" --preview="GH_FORCE_TTY=true gh pr view {1}" | awk "{print \$2}" | xargs git switch'
 alias push='git push --set-upstream origin $(git_current_branch)'
 
 # Global environment variables
