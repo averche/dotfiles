@@ -11,8 +11,8 @@ A collection of configuration files for my macbook:
   - [alacritty](https://alacritty.org/) ([config](dotfiles/.config/alacritty/))
   - [kitty](https://sw.kovidgoyal.net/kitty/) ([config](dotfiles/.config/kitty/))
 - Terminal multiplexer: [tmux](https://en.wikipedia.org/wiki/Tmux) ([config](dotfiles/.tmux.conf))
-  - [tpm](https://github.com/tmux-plugins/tpm) ([config](dotfiles/.tmux/plugins/tpm))
-  - [jimeh/tmux-themepack](https://github.com/jimeh/tmux-themepack) ([config](dotfiles/.tmux/plugins/tmux-thempack))
+  - [tpm](https://github.com/tmux-plugins/tpm) ([config](dotfiles/.tmux/plugins/))
+  - [jimeh/tmux-themepack](https://github.com/jimeh/tmux-themepack) ([config](dotfiles/.tmux/plugins/))
 
 ![screenshot](assets/dev-environment.png)
 
