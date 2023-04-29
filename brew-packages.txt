@@ -21,7 +21,9 @@ htop
 hyperfine
 jq
 k6
+k9s
 kcat
+kind
 lazygit
 lolcat
 maven
