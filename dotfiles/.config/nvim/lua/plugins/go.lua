@@ -1,15 +1,13 @@
 return {
-  -- add go to treesitter
+  -- add to treesitter
   {
     "nvim-treesitter/nvim-treesitter",
     opts = function(_, opts)
-      if type(opts.ensure_installed) == "table" then
-        vim.list_extend(opts.ensure_installed, { "go" })
-      end
+      vim.list_extend(opts.ensure_installed, { "go" })
     end,
   },
 
-  -- correctly setup lspconfig
+  -- set up lspconfig
   {
     "neovim/nvim-lspconfig",
     opts = {
