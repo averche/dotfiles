@@ -1,9 +1,9 @@
 return {
-  { "cpea2506/one_monokai.nvim" },
+  { "jacoborus/tender.vim" },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "one_monokai",
+      colorscheme = "tender",
     },
   },
 }
