@@ -24,4 +24,3 @@ A collection of configuration files for my macbook:
 
 This script uses [`stow`](https://www.gnu.org/software/stow/) to create
 symlinks to the corresponding files in the home directory.
-
