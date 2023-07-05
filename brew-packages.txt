@@ -31,6 +31,7 @@ md5sha1sum
 ncdu
 neovim
 nvm
+postgresql
 prettier
 procs
 prometheus
