@@ -1634,6 +1634,9 @@
   (( ! $+functions[p10k] )) || p10k reload
 }
 
+# Supress "Console output during zsh initialization detected" warning.
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+
 # Tell `p10k configure` which file it should overwrite.
 typeset -g POWERLEVEL9K_CONFIG_FILE=${${(%):-%x}:a}
 
