@@ -11,7 +11,7 @@ fi
 # Aliases
 alias branch='git branch --sort=-committerdate | fzf --preview "git diff {1} --color=always | delta" --pointer="" | xargs git switch'
 alias cat='bat'
-alias clone='f(){ git clone --recurse-submodules "https://github.com/$(basename "$PWD")/$@";  unset -f f; }; f'
+alias clon='f(){ git clone --recurse-submodules "https://github.com/$(basename "$PWD")/$@";  unset -f f; }; f'
 alias e='nvim -O $*'
 alias p='fzf --preview "bat --color=always --style=numbers --line-range=:60 {}"'
 alias pr='gh pr view "$(git rev-parse --abbrev-ref HEAD)" --web'
