@@ -1,17 +1,16 @@
 return {
-  "nvim-telescope/telescope.nvim",
-  keys = {
-    -- a custom builtin.lsp_references implementation
-    {
-      "<leader>gr",
+  "neovim/nvim-lspconfig",
+  init = function()
+    local keys = require("lazyvim.plugins.lsp.keymaps").get()
+    keys[#keys + 1] = {
+      "gr",
       function()
         require("telescope.builtin").lsp_references({
           show_line = false,
         })
       end,
-      desc = "References",
-    },
-  },
+    }
+  end,
 }
 
 -- vim: ts=2 sts=2 sw=2 et
