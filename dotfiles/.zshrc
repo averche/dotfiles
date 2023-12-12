@@ -12,8 +12,8 @@ fi
 alias branch='git branch --sort=-committerdate | fzf --preview "git diff {1} --color=always | delta" --pointer="" | xargs git switch'
 alias cat='bat'
 alias clon='f(){ git clone --recurse-submodules --single-branch "https://github.com/$(basename "$PWD")/$@";  unset -f f; }; f'
-alias e='nvim -O $*'
-alias vim='nvim -O $*'
+alias e="nvim --cmd 'let g:omni_sql_no_default_maps = 1' -O $*"
+alias vim="nvim --cmd 'let g:omni_sql_no_default_maps = 1' -O $*"
 alias p='fzf --preview "bat --color=always --style=numbers --line-range=:60 {}"'
 alias pr='gh pr view "$(git rev-parse --abbrev-ref HEAD)" --web'
 alias prs='gh pr list --author="@me" --json=number,headRefName,reviewDecision --jq ".[] | \"\(.number)\t\(.headRefName)\t\(.reviewDecision)\"" | column -t | fzf --pointer="" --preview="GH_FORCE_TTY=true gh pr view {1}" | awk "{print \$2}" | xargs git switch'
