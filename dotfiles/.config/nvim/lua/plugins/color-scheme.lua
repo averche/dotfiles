@@ -1,9 +1,9 @@
 return {
-  { "averche/tender.vim" },
+  { "tanvirtin/monokai.nvim" },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "tender",
+      colorscheme = "monokai",
     },
   },
 }

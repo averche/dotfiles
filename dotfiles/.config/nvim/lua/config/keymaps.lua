@@ -3,19 +3,19 @@
 -- Add any additional keymaps here
 
 -- Window split management
-vim.keymap.set("n", "<Tab>", "<C-w>w") -- move to the next split panel
+vim.keymap.set("n", "<C-w>", "<cmd>TmuxNavigateNext<cr>") -- move to the next split panel
 
-vim.keymap.set("n", "<C-h>", "<cmd>vertical resize +1<CR>", { silent = true })
-vim.keymap.set("n", "<C-l>", "<cmd>vertical resize -1<CR>", { silent = true })
+-- vim.keymap.set("n", "<C-h>", "<cmd>vertical resize +1<CR>", { silent = true })
+-- vim.keymap.set("n", "<C-l>", "<cmd>vertical resize -1<CR>", { silent = true })
 
 vim.keymap.set("n", "<S-Tab>", "<cmd>BufferLineCycleNext<cr>", { desc = "Next buffer" })
 
 -- Scroll up & down without moving the cursor
-vim.keymap.set({ "n", "v" }, "<C-j>", "<C-e>")
-vim.keymap.set({ "n", "v" }, "<C-e>", "<Nop>", { silent = true })
+vim.keymap.set({ "n", "v" }, "<C-j>", "<cmd>TmuxNavigateDown<cr>")
+-- vim.keymap.set({ "n", "v" }, "<C-e>", "<Nop>", { silent = true })
 
-vim.keymap.set({ "n", "v" }, "<C-k>", "<C-y>")
-vim.keymap.set({ "n", "v" }, "<C-y>", "<Nop>", { silent = true })
+-- vim.keymap.set({ "n", "v" }, "<C-k>", "<C-y>")
+-- vim.keymap.set({ "n", "v" }, "<C-y>", "<Nop>", { silent = true })
 
 -- Remap shift up/down to enter visual line mode & move up/down
 vim.keymap.set("n", "<S-Up>", "<S-v>k")
