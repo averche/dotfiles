@@ -28,10 +28,11 @@ return {
       -- make sure mason installs the server
       servers = {
         gopls = {
-          completeUnimported = true,
-          usePlaceholders = true,
-          analyses = {
-            unusedparams = true,
+          settings = {
+            gopls = {
+              completeUnimported = true,
+              usePlaceholders = true,
+            },
           },
         },
       },
