@@ -1,9 +1,9 @@
 return {
-  { "polirritmico/monokai-nightasty.nvim" },
+  { "jacoborus/tender.vim" },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "monokai-nightasty",
+      colorscheme = "tender",
     },
   },
 }
