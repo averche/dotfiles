@@ -2,15 +2,11 @@
 
 # Window 0: code
 tmux rename-window code
-tmux split-window -h -p 100
-tmux split-window -v -p 24
-tmux split-window -h -p 22
-tmux clock-mode
 
 # Window 1: terminal
 tmux new-window -n terminal
 
-# Select correct pane & clean up
-tmux select-window -p
-tmux select-pane -t1
-tmux kill-pane -t0
+# Select window 0
+tmux select-window -t 0
+
+nvim
