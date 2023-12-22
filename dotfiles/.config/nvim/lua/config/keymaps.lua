@@ -2,13 +2,17 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
+-- Increment / descrement
+vim.keymap.set("n", "+", "<C-a>") -- C-a is remapped to BufferLineCycleNext
+vim.keymap.set("n", "-", "<C-x>") -- C-x is remapped to toggleterm
+
 -- Window split management
-vim.keymap.set("n", "<Tab>", "<C-w>w") -- move to the next split panel
+vim.keymap.set("n", "<C-w>", "<C-w>w") -- move to the next split panel
 
 vim.keymap.set("n", "<C-h>", "<cmd>vertical resize +1<CR>", { silent = true })
 vim.keymap.set("n", "<C-l>", "<cmd>vertical resize -1<CR>", { silent = true })
 
-vim.keymap.set("n", "<S-Tab>", "<cmd>BufferLineCycleNext<cr>", { desc = "Next buffer" })
+vim.keymap.set("n", "<C-a>", "<cmd>BufferLineCycleNext<cr>", { desc = "Next buffer" })
 
 -- Scroll up & down without moving the cursor
 vim.keymap.set({ "n", "v" }, "<C-j>", "<C-e>")
