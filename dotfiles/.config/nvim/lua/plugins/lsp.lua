@@ -1,5 +1,4 @@
 return {
-  -- set up lspconfig
   {
     "neovim/nvim-lspconfig",
     init = function()
