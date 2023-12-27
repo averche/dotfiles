@@ -1,5 +1,5 @@
 return {
-  { "jacoborus/tender.vim" },
+  { "averche/tender.vim" },
   {
     "LazyVim/LazyVim",
     opts = {
