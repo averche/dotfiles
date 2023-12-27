@@ -3,8 +3,9 @@
 -- Add any additional keymaps here
 
 -- Increment / descrement
-vim.keymap.set("n", "+", "<C-a>") -- C-a is remapped to BufferLineCycleNext
-vim.keymap.set("n", "-", "<C-x>") -- C-x is remapped to toggleterm
+vim.keymap.set({ "n", "v" }, "+", "<C-a>") -- C-a is remapped to BufferLineCycleNext
+vim.keymap.set({ "n", "v" }, "-", "<C-x>") -- C-x is remapped to toggleterm
+vim.keymap.set("v", "<C-x>", "<Nop>", { silent = true })
 
 -- Window split management
 vim.keymap.set("n", "<C-w>", "<C-w>w") -- move to the next split panel
