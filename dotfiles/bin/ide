@@ -1,12 +1,10 @@
 #!/bin/sh
 
-# Window 0: code
 tmux rename-window code
 
-# Window 1: terminal
-tmux new-window -n terminal
+tmux new-window -n terminal1
+tmux new-window -n terminal2
 
-# Select window 0
 tmux select-window -t 0
 
 nvim
