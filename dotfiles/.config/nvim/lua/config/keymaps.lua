@@ -4,7 +4,7 @@
 
 -- Increment / descrement
 vim.keymap.set({ "n", "v" }, "+", "<C-a>") -- C-a is remapped to BufferLineCycleNext
-vim.keymap.set({ "n", "v" }, "-", "<C-x>") -- C-x is remapped to toggleterm
+vim.keymap.set({ "n", "v" }, "-", "<C-x>") -- C-x is remapped to tmux next window
 vim.keymap.set("v", "<C-x>", "<Nop>", { silent = true })
 
 -- Window split management
