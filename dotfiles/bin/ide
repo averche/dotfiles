@@ -1,10 +1,9 @@
 #!/bin/sh
 
+# window 0: code
 tmux rename-window code
+tmux split-window -v -d -p 38
+tmux resize-pane -Z
 
-tmux new-window -n terminal1
-tmux new-window -n terminal2
-
-tmux select-window -t 0
-
-nvim
+# window 1: terminal
+tmux new-window -d -n terminal
