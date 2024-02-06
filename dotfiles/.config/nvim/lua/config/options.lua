@@ -9,4 +9,7 @@ vim.opt.shiftwidth = 4
 vim.opt.list = true
 vim.opt.listchars = "tab:>-"
 
+-- Always keep 8 lines above/below cursor unless at start/end of file
+vim.opt.scrolloff = 8
+
 -- vim: ts=2 sts=2 sw=2 et
