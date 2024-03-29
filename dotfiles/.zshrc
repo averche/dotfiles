@@ -11,7 +11,7 @@ fi
 # Aliases
 alias branch='git branch --sort=-committerdate | fzf --preview "git diff {1} --color=always | delta" --pointer="" | xargs git switch'
 alias cat='bat'
-alias clon='f(){ git clone --recurse-submodules --single-branch "https://github.com/$(basename "$PWD")/$@";  unset -f f; }; f'
+alias clon='function f(){ git clone --recurse-submodules --single-branch "https://github.com/$(basename "$PWD")/$@";  unset -f f; }; f'
 alias e="nvim --cmd 'let g:omni_sql_no_default_maps = 1' -O $*"
 alias vim="nvim --cmd 'let g:omni_sql_no_default_maps = 1' -O $*"
 alias p='fzf --preview "bat --color=always --style=numbers --line-range=:60 {}"'
