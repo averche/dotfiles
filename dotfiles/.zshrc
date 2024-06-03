@@ -13,6 +13,7 @@ alias branch='git branch --sort=-committerdate | fzf --preview "git diff {1} --c
 alias cat='bat'
 alias clon='function f(){ git clone --recurse-submodules --single-branch "https://github.com/$(basename "$PWD")/$@";  unset -f f; }; f'
 alias rge='function f(){ rg $@ -l | fzf --preview "rg --color=always $@ {1}" | xargs nvim;  unset -f f; }; f'
+alias fde='function f(){ fd $@ | fzf --preview "bat --color=always --style=numbers --line-range=:60 {}" | xargs nvim;  unset -f f; }; f'
 alias e="nvim --cmd 'let g:omni_sql_no_default_maps = 1' -O $*"
 alias p='fzf --preview "bat --color=always --style=numbers --line-range=:60 {}"'
 alias pr='gh pr view "$(git rev-parse --abbrev-ref HEAD)" --web'
