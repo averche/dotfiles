@@ -1,0 +1,31 @@
+import = ["/Users/avean/.config/alacritty/alacritty-theme/themes/nord.toml"]
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[font]
+size = 16.0
+
+[font.normal]
+family = "FiraCode Nerd Font Mono"
+style = "Medium"
+
+[[keyboard.bindings]]
+action = "ToggleFullscreen"
+key = "M"
+mods = "Command"
+
+[scrolling]
+history = 10000
+multiplier = 1
+
+[window]
+decorations = "full"
+
+[window.dimensions]
+columns = 174
+lines = 54
+
+[window.padding]
+x = 10
+y = 10
