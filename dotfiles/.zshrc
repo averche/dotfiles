@@ -25,6 +25,7 @@ alias hcp='source ~/github/hashicorp/terraform-aws-cloud-bastion/tools/infra_too
 # Global environment variables
 export GOPATH=~/go
 export GOBIN=~/go/bin
+export GOPRIVATE=github.com/hashicorp
 export GREP_OPTIONS='--color=auto'
 export JAVA_HOME=/opt/homebrew/opt/openjdk@11
 export PATH=$JAVA_HOME/bin:$GOBIN:$PATH
