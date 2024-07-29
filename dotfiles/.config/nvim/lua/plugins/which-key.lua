@@ -2,7 +2,7 @@ return {
   "folke/which-key.nvim",
   opts = {
     triggers = {
-      "<leader>",
+      { "<leader>", mode = { "n", "v" } },
     },
   },
 }
