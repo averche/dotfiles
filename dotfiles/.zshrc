@@ -20,7 +20,8 @@ alias pr='gh pr view "$(git rev-parse --abbrev-ref HEAD)" --web'
 alias prs='gh pr list --author="@me" --json=number,headRefName,reviewDecision --jq ".[] | \"\(.number)\t\(.headRefName)\t\(.reviewDecision)\"" | column -t | fzf --pointer="" --preview="GH_FORCE_TTY=true gh pr view {1}" | awk "{print \$2}" | xargs git switch'
 alias push='git push --set-upstream origin $(git_current_branch)'
 alias pull='git pull --recurse-submodules=yes'
-alias hcp='source ~/github/hashicorp/terraform-aws-cloud-bastion/tools/infra_tools.sh'
+alias hcpe='source ~/github/hashicorp/terraform-aws-cloud-bastion/tools/infra_tools.sh'
+alias k='kubectl'
 
 # Global environment variables
 export GOPATH=~/go
