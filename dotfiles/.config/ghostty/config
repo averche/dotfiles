@@ -1,0 +1,26 @@
+# command = /bin/zsh --login -c 'tmux new-session -A -D'
+shell-integration = zsh
+confirm-close-surface = false
+
+# Font
+font-size = 16
+font-style-bold = true
+font-style-bold-italic = false
+font-family = "FiraCode Nerd Font"
+window-title-font-family = "FiraCode Nerd Font"
+
+# Theming
+theme = GitHub Dark
+background-opacity = 0.85
+background-blur-radius = 25
+window-padding-x = 16,16
+window-padding-y = 16,16
+
+# Quick Terminal
+keybind = global:ctrl+grave_accent=toggle_quick_terminal
+
+# Vim Style Navigation for ghostty splits
+keybind = cmd+shift+h=goto_split:left
+keybind = cmd+shift+j=goto_split:bottom
+keybind = cmd+shift+k=goto_split:top
+keybind = cmd+shift+l=goto_split:right
