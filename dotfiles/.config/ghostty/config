@@ -11,7 +11,7 @@ window-title-font-family = "FiraCode Nerd Font"
 
 # Theming
 theme = GitHub Dark
-background-opacity = 0.85
+background-opacity = 0.93
 background-blur-radius = 25
 window-padding-x = 16,16
 window-padding-y = 16,16
