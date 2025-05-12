@@ -22,6 +22,7 @@ alias push='git push --set-upstream origin $(git_current_branch)'
 alias pull='git pull --recurse-submodules=yes'
 alias hcpe='source ~/github/hashicorp/terraform-aws-cloud-bastion/tools/infra_tools.sh'
 alias k='kubectl'
+alias b='function f(){ figlet $@ | lolcat }; f'
 
 # Global environment variables
 export GOPATH=~/go
