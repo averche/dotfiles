@@ -32,6 +32,7 @@ export GREP_OPTIONS='--color=auto'
 export JAVA_HOME=/opt/homebrew/opt/openjdk@11
 export PATH=$JAVA_HOME/bin:$GOBIN:$PATH
 export NVM_DIR="$HOME/.nvm"
+export DOCKER_CLI_HINTS="false"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
