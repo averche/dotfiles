@@ -23,6 +23,7 @@ alias pull='git pull --recurse-submodules=yes'
 alias hcpe='source ~/github/hashicorp/terraform-aws-cloud-bastion/tools/infra_tools.sh'
 alias k='kubectl'
 alias b='function f(){ figlet $@ | lolcat }; f'
+alias dps='docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"'
 
 # Global environment variables
 export GOPATH=~/go
