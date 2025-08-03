@@ -4,9 +4,6 @@
 [submodule "dotfiles/.tmux/plugins/tmux-themepack"]
 	path = dotfiles/.tmux/plugins/tmux-themepack
 	url = https://github.com/jimeh/tmux-themepack
-[submodule "dotfiles/.config/alacritty/alacritty-theme"]
-	path = dotfiles/.config/alacritty/alacritty-theme
-	url = https://github.com/alacritty/alacritty-theme
 [submodule "dotfiles/.tmux/plugins/tmux-sensible"]
 	path = dotfiles/.tmux/plugins/tmux-sensible
 	url = https://github.com/tmux-plugins/tmux-sensible
