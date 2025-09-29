@@ -1,7 +1,7 @@
 -- Copied from https://github.com/LazyVim/LazyVim/blob/431ceaf329729d4f9afe865c8722808cdbf1cbe9/lua/lazyvim/plugins/extras/lang/go.lua
 --
 -- Removed "goimports" from:
---   - williamboman/mason.nvim
+--   - mason-org/mason.nvim
 --   - nvimtools/none-ls.nvim
 --   - stevearc/conform.nvim
 
@@ -83,7 +83,7 @@ return {
   },
   -- Ensure Go tools are installed
   {
-    "williamboman/mason.nvim",
+    "mason-org/mason.nvim",
     opts = { ensure_installed = { "gofumpt" } },
   },
   {
@@ -91,7 +91,7 @@ return {
     optional = true,
     dependencies = {
       {
-        "williamboman/mason.nvim",
+        "mason-org/mason.nvim",
         opts = { ensure_installed = { "gomodifytags", "impl" } },
       },
     },
@@ -118,7 +118,7 @@ return {
     optional = true,
     dependencies = {
       {
-        "williamboman/mason.nvim",
+        "mason-org/mason.nvim",
         opts = { ensure_installed = { "delve" } },
       },
       {
