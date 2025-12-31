@@ -4,4 +4,7 @@
 tmux rename-window code
 
 # window 1: terminal
+tmux new-window -d -n local
+
+# window 2: terminal
 tmux new-window -d -n terminal
