@@ -1,4 +1,4 @@
--- Copied from https://github.com/LazyVim/LazyVim/blob/431ceaf329729d4f9afe865c8722808cdbf1cbe9/lua/lazyvim/plugins/extras/lang/go.lua
+-- Copied from https://github.com/LazyVim/LazyVim/blob/c64a61734fc9d45470a72603395c02137802bc6f/lua/lazyvim/plugins/extras/lang/go.lua
 --
 -- Removed "goimports" from:
 --   - mason-org/mason.nvim
@@ -35,16 +35,15 @@ return {
                 vendor = true,
               },
               hints = {
-                assignVariableTypes = false,
-                compositeLiteralFields = false,
-                compositeLiteralTypes = false,
-                constantValues = false,
-                functionTypeParameters = false,
-                parameterNames = false,
-                rangeVariableTypes = false,
+                assignVariableTypes = true,
+                compositeLiteralFields = true,
+                compositeLiteralTypes = true,
+                constantValues = true,
+                functionTypeParameters = true,
+                parameterNames = true,
+                rangeVariableTypes = true,
               },
               analyses = {
-                fieldalignment = false, -- modified
                 nilness = true,
                 unusedparams = true,
                 unusedwrite = true,
@@ -63,7 +62,7 @@ return {
         gopls = function(_, opts)
           -- workaround for gopls not supporting semanticTokensProvider
           -- https://github.com/golang/go/issues/54531#issuecomment-1464982242
-          LazyVim.lsp.on_attach(function(client, _)
+          Snacks.util.lsp.on({ name = "gopls" }, function(_, client)
             if not client.server_capabilities.semanticTokensProvider then
               local semantic = client.config.capabilities.textDocument.semanticTokens
               client.server_capabilities.semanticTokensProvider = {
@@ -75,7 +74,7 @@ return {
                 range = true,
               }
             end
-          end, "gopls")
+          end)
           -- end workaround
         end,
       },
@@ -84,7 +83,7 @@ return {
   -- Ensure Go tools are installed
   {
     "mason-org/mason.nvim",
-    opts = { ensure_installed = { "gofumpt" } },
+    opts = { ensure_installed = { "goimports", "gofumpt" } },
   },
   {
     "nvimtools/none-ls.nvim",
@@ -100,16 +99,33 @@ return {
       opts.sources = vim.list_extend(opts.sources or {}, {
         nls.builtins.code_actions.gomodifytags,
         nls.builtins.code_actions.impl,
+        nls.builtins.formatting.goimports,
         nls.builtins.formatting.gofumpt,
       })
     end,
+  },
+  -- Add linting
+  {
+    "mfussenegger/nvim-lint",
+    optional = true,
+    dependencies = {
+      {
+        "mason-org/mason.nvim",
+        opts = { ensure_installed = { "golangci-lint" } },
+      },
+    },
+    opts = {
+      linters_by_ft = {
+        go = { "golangcilint" },
+      },
+    },
   },
   {
     "stevearc/conform.nvim",
     optional = true,
     opts = {
       formatters_by_ft = {
-        go = { "gofumpt" },
+        go = { "goimports", "gofumpt" },
       },
     },
   },
