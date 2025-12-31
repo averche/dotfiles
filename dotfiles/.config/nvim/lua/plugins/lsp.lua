@@ -1,19 +1,24 @@
 return {
   {
     "neovim/nvim-lspconfig",
-    init = function()
-      local keys = require("lazyvim.plugins.lsp.keymaps").get()
-      keys[#keys + 1] = {
-        -- remap 'gr' to the modified lsp_references function
-        -- See: https://www.lazyvim.org/plugins/lsp
-        "gr",
-        function()
-          require("telescope.builtin").lsp_references({
-            show_line = false,
+    opts = {
+      setup = {
+        ["*"] = function(_, opts)
+          opts.keys = opts.keys or {}
+
+          table.insert(opts.keys, {
+            "gr",
+            function()
+              require("telescope.builtin").lsp_references({
+                show_line = false,
+              })
+            end,
+            desc = "LSP References",
+            has = "references",
           })
         end,
-      }
-    end,
+      },
+    },
   },
 }
 
