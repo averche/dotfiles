@@ -1,10 +1,13 @@
 #!/bin/sh
 
-# window 0: code
-tmux rename-window code
+# window 0: terminal
+tmux rename-window terminal
 
-# window 1: terminal
+# window 1: local
 tmux new-window -d -n local
 
-# window 2: terminal
-tmux new-window -d -n terminal
+# window 2: copilot
+tmux new-window -d -n copilot
+
+# window 3: code
+tmux new-window -d -n code
