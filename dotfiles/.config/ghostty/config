@@ -28,3 +28,7 @@ keybind = cmd+shift+l=goto_split:right
 # Cursor
 cursor-style-blink = false
 shell-integration-features = no-cursor
+
+# SSH woraround: https://ghostty.org/docs/help/terminfo#ssh
+shell-integration-features = ssh-terminfo
+shell-integration-features = ssh-env
